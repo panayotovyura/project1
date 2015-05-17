@@ -21,7 +21,7 @@ class BatteriesRepository extends EntityRepository
     {
         return $this->getEntityManager()
             ->createQueryBuilder()
-            ->select(['b.type'])
+            ->select('b.type')
             ->addSelect('SUM(b.count) AS stat_count')
             ->from('Levi9BatteriesBundle:Batteries', 'b')
             ->groupBy('b.type')
