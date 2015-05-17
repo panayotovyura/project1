@@ -1,5 +1,0 @@
-_assetic:
-    resource: .
-    type: assetic
-_app:
-    resource: /Users/yurapanayotov/Documents/Projects/sf-levi9/project1/app/config/routing_dev.yml
