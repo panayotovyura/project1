@@ -1,0 +1,4 @@
+services:
+#    levi9_batteries.example:
+#        class: Levi9\BatteriesBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

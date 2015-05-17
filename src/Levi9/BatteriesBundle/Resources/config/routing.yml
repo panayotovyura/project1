@@ -1,0 +1,3 @@
+levi9_batteries_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: Levi9BatteriesBundle:Default:index }

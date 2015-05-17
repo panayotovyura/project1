@@ -1,0 +1,7 @@
+levi9_batteries:
+    resource: "@Levi9BatteriesBundle/Controller/"
+    type:     annotation
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
