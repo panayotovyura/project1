@@ -18,6 +18,7 @@ class BatteriesType extends AbstractType
             ->add('type')
             ->add('count')
             ->add('name')
+            // todo: Add buttons in the templates, not in the form classes or the controllers.
             ->add('save', 'submit')
         ;
     }
