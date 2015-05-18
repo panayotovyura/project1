@@ -26,4 +26,18 @@ class BatteriesRepository extends EntityRepository
             ->getResult()
         ;
     }
+
+    /**
+     * Delete all batteries.
+     *
+     * @return mixed
+     */
+    public function deleteAll()
+    {
+        return $this->getEntityManager()
+            ->createQueryBuilder()
+            ->delete($this->getClassName())
+            ->getQuery()
+            ->execute();
+    }
 }
