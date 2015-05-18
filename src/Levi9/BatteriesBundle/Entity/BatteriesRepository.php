@@ -19,18 +19,8 @@ class BatteriesRepository extends EntityRepository
      */
     public function getStatistics()
     {
-        // todo: if you are working with current entity you can omit it type:
-        // return $this->createQueryBuilder('b')
-        //     ->select('SUM(b.count) as stat_count, b.type')
-        //     ->groupBy('b.type')
-        //     ->getQuery()
-        //     ->getResult();
-
-        return $this->getEntityManager()
-            ->createQueryBuilder()
-            ->select('b.type')
-            ->addSelect('SUM(b.count) AS stat_count')
-            ->from('Levi9BatteriesBundle:Batteries', 'b')
+        return $this->createQueryBuilder('b')
+            ->select('SUM(b.count) AS stat_count, b.type')
             ->groupBy('b.type')
             ->getQuery()
             ->getResult()
