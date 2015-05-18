@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Levi9\BatteriesBundle\Form\BatteriesType;
 
+// todo: find better name for controller
 class DefaultController extends Controller
 {
     /**
@@ -23,6 +24,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        // todo: use getManager instead
         $batteries = $this->getDoctrine()
             ->getEntityManager()
             ->getRepository('Levi9BatteriesBundle:Batteries')
@@ -48,6 +50,7 @@ class DefaultController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            // todo: use getManager instead
             $em = $this->getDoctrine()->getEntityManager();
             $em->persist($form->getData());
             $em->flush();
