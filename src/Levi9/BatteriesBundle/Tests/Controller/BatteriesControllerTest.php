@@ -35,8 +35,6 @@ class BatteriesControllerTest extends WebTestCase
         $crawler = $this->client->request(Request::METHOD_GET, '/add');
         $form = $crawler->selectButton('Save')->form();
 
-        // todo: use short selectors (e.g. type/count) but not full ones. Instead of one relation your have two -
-        // field name and form name.
         $form['levi9_batteriesbundle_batteries[type]'] = $type;
         $form['levi9_batteriesbundle_batteries[count]'] = $count;
         $this->client->submit($form);
